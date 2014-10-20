@@ -62,11 +62,11 @@
 # - hosts: all
 #   name: print
 #   tasks:
-#     - action: 'debug msg="Index $inventory_hostname: ${ceph-idx}"'
+#     - action: 'debug msg="Index {{inventory_hostname}}: {{ceph_idx}}"'
 #       tags:
 #         - test
 
-#     - action: 'debug msg="Index $inventory_hostname: ${hostvars.{$inventory_hostname}.ceph-name}"'
+#     - action: 'debug msg="Index {{inventory_hostname}}: {{hostvars.{{inventory_hostname}}.ceph_name}}"'
 #       tags:
 #         - cephtest
       

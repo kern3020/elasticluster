@@ -16,8 +16,8 @@
 #
 
 - name: Install iptables packages (Ubuntu)
-  action: apt pkg={{ item }} update_cache=yes
-  when: is_debian_or_ubuntu and is_docker_container is not defined
+  action: apt pkg={{item}} update_cache=yes
+  when: is_debian_or_ubuntu
   with_items:
     - iptables
     - iptables-persistent
